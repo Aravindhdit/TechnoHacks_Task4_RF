@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: url('neon_bk13.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff;
+    animation: neon-border 2s infinite alternate;
+}
+
+.neon-text {
+    font-size: 2em;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f, 0 0 60px #00f;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #0ff;
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f;
+}
+
+.neon-button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0ff;
+    color: #000;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+.neon-button:hover {
+    box-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
+}
+
+.error {
+    color: #ff00ff;
+    font-size: 0.875em;
+    display: none;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px #ff00ff, -2px -2px #0ff;
+    }
+    20% {
+        text-shadow: -2px -2px #ff00ff, 2px 2px #0ff;
+    }
+    40% {
+        text-shadow: 2px -2px #ff00ff, -2px 2px #0ff;
+    }
+    60% {
+        text-shadow: -2px 2px #ff00ff, 2px -2px #0ff;
+    }
+    80% {
+        text-shadow: 2px 2px #ff00ff, -2px -2px #0ff;
+    }
+    100% {
+        text-shadow: -2px -2px #ff00ff, 2px 2px #0ff;
+    }
+}
+
+@keyframes neon-border {
+    0% {
+        box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff, 0 0 20px #0ff, 0 0 25px #0ff;
+    }
+    100% {
+        box-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff;
+    }
+}
+
+.neon-text, .neon-button {
+    animation: glitch 1s infinite alternate;
+}
